@@ -22,22 +22,40 @@
   
 
   
+  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/gallery.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
-
-  
-  <script src="../../../_static/js/modernizr.min.js"></script>
+    <link rel="search" title="Search" href="../../../search.html" />
+    <!-- Google Analytics tracking code -->
+    <!-- See https://developers.google.com/analytics/devguides/collection/analyticsjs/ for documentation. -->
+    <!-- 'storage': 'none' disables cookies -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+            Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-38125837-7', 'auto', {'storage': 'none'});
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
 
 </head>
 
@@ -45,11 +63,10 @@
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -84,8 +101,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -294,8 +312,7 @@
 <span class="sd">    ...             ses.call_module(&quot;grdinfo&quot;, &quot;{} -C -&gt;{}&quot;.format(fin, fout.name))</span>
 <span class="sd">    ...             # Read the contents of the temp file before it&#39;s deleted.</span>
 <span class="sd">    ...             print(fout.read().strip())</span>
-<span class="sd">    -180 180 -90 90 -8425 5551 1 1 361 181</span>
-
+<span class="sd">    -180 180 -90 90 -8596 5559 1 1 361 181</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
     <span class="c1"># The minimum version of GMT required</span>
@@ -364,7 +381,7 @@
         <span class="k">if</span> <span class="n">Version</span><span class="p">(</span><span class="n">version</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">Version</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">required_version</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">destroy</span><span class="p">()</span>
             <span class="k">raise</span> <span class="n">GMTVersionError</span><span class="p">(</span>
-                <span class="s2">&quot;Using an incompatible GMT version </span><span class="si">{}</span><span class="s2">. Must be newer than </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                <span class="s2">&quot;Using an incompatible GMT version </span><span class="si">{}</span><span class="s2">. Must be equal or newer than </span><span class="si">{}</span><span class="s2">.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                     <span class="n">version</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">required_version</span>
                 <span class="p">)</span>
             <span class="p">)</span>
@@ -650,7 +667,7 @@
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        module : str</span>
-<span class="sd">            Module name (``&#39;pscoast&#39;``, ``&#39;psbasemap&#39;``, etc).</span>
+<span class="sd">            Module name (``&#39;coast&#39;``, ``&#39;basemap&#39;``, etc).</span>
 <span class="sd">        args : str</span>
 <span class="sd">            String with the command line arguments that will be passed to the</span>
 <span class="sd">            module (for example, ``&#39;-R0/5/0/10 -JM&#39;``).</span>
@@ -1375,7 +1392,7 @@
 <span class="sd">        &gt;&gt;&gt; print(data.lat.values.min(), data.lat.values.max())</span>
 <span class="sd">        -90.0 90.0</span>
 <span class="sd">        &gt;&gt;&gt; print(data.values.min(), data.values.max())</span>
-<span class="sd">        -8425.0 5551.0</span>
+<span class="sd">        -8596.0 5559.0</span>
 <span class="sd">        &gt;&gt;&gt; with Session() as ses:</span>
 <span class="sd">        ...     with ses.virtualfile_from_grid(data) as fin:</span>
 <span class="sd">        ...         # Send the output to a file so that we can read it</span>
@@ -1383,7 +1400,7 @@
 <span class="sd">        ...             args = &#39;{} -L0 -Cn -&gt;{}&#39;.format(fin, fout.name)</span>
 <span class="sd">        ...             ses.call_module(&#39;grdinfo&#39;, args)</span>
 <span class="sd">        ...             print(fout.read().strip())</span>
-<span class="sd">        -180 180 -90 90 -8425 5551 1 1 361 181</span>
+<span class="sd">        -180 180 -90 90 -8596 5559 1 1 361 181</span>
 <span class="sd">        &gt;&gt;&gt; # The output is: w e s n z0 z1 dx dy n_columns n_rows</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -1473,7 +1490,8 @@
            </div>
            
           </div>
-          <footer>
+          
+<footer>
   
 
   <hr/>
@@ -1481,11 +1499,26 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      
+        <span class="commit">
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/63d23d4e0702edb94234f10d23d210cdf1adb54b">63d23d4</a></code>.
+        </span>
+      
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+<p>
+Built with <a href="http://sphinx-doc.org/">Sphinx</a>
+using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+provided by <a href="https://readthedocs.org">Read the Docs</a>
+</p>
+<p>
+This website uses Google Analytics to gather usage statistics.
+However, it does not use cookies or track you across different websites.
+Page view data are used to help us improve the site and provide an estimate of the
+software usage.
+</p>
+
 
 </footer>
 
@@ -1498,26 +1531,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

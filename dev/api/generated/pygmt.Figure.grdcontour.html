@@ -22,13 +22,21 @@
   
 
   
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/gallery.css" type="text/css" />
@@ -36,10 +44,20 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="pygmt.Figure.grdimage" href="pygmt.Figure.grdimage.html" />
-    <link rel="prev" title="pygmt.Figure.contour" href="pygmt.Figure.contour.html" /> 
-
-  
-  <script src="../../_static/js/modernizr.min.js"></script>
+    <link rel="prev" title="pygmt.Figure.contour" href="pygmt.Figure.contour.html" />
+    <!-- Google Analytics tracking code -->
+    <!-- See https://developers.google.com/analytics/devguides/collection/analyticsjs/ for documentation. -->
+    <!-- 'storage': 'none' disables cookies -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new
+            Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-38125837-7', 'auto', {'storage': 'none'});
+      ga('set', 'anonymizeIp', true);
+      ga('send', 'pageview');
+    </script>
 
 </head>
 
@@ -47,11 +65,10 @@
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
     <a href="../../index.html"><h2 class="sidebar-title">PyGMT</h2></a>
 
@@ -86,8 +103,9 @@
             
               <p class="caption"><span class="caption-text">Getting Started</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../install.html">Installing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../tutorials/overview.html">Making your first figure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/first-figure.html">Making your first figure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../gallery/index.html">Gallery</a></li>
 </ul>
 <p class="caption"><span class="caption-text">User Guide</span></p>
@@ -104,12 +122,17 @@
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.html">pygmt.Figure</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.basemap.html">pygmt.Figure.basemap</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.coast.html">pygmt.Figure.coast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.colorbar.html">pygmt.Figure.colorbar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.plot.html">pygmt.Figure.plot</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.contour.html">pygmt.Figure.contour</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">pygmt.Figure.grdcontour</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.grdimage.html">pygmt.Figure.grdimage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.legend.html">pygmt.Figure.legend</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.logo.html">pygmt.Figure.logo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.image.html">pygmt.Figure.image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.shift_origin.html">pygmt.Figure.shift_origin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.text.html">pygmt.Figure.text</a></li>
+<li class="toctree-l3"><a class="reference internal" href="pygmt.makecpt.html">pygmt.makecpt</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.savefig.html">pygmt.Figure.savefig</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.show.html">pygmt.Figure.show</a></li>
 <li class="toctree-l3"><a class="reference internal" href="pygmt.Figure.psconvert.html">pygmt.Figure.psconvert</a></li>
@@ -241,10 +264,10 @@
 <h1>pygmt.Figure.grdcontour<a class="headerlink" href="#pygmt-figure-grdcontour" title="Permalink to this headline">¶</a></h1>
 <dl class="method">
 <dt id="pygmt.Figure.grdcontour">
-<code class="descclassname">Figure.</code><code class="descname">grdcontour</code><span class="sig-paren">(</span><em>grid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pygmt.Figure.grdcontour" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">Figure.</code><code class="descname">grdcontour</code><span class="sig-paren">(</span><em>self</em>, <em>grid</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#pygmt.Figure.grdcontour" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert grids or images to contours and plot them on maps</p>
 <p>Takes a grid file name or an xarray.DataArray object as input.</p>
-<p>Full option list at <a class="reference external" href="http://gmt.soest.hawaii.edu/doc/latest/grdcontour.html">http://gmt.soest.hawaii.edu/doc/latest/grdcontour.html</a></p>
+<p>Full option list at <a class="reference external" href="https://www.generic-mapping-tools.org/gmt/latest/grdcontour.html">https://www.generic-mapping-tools.org/gmt/latest/grdcontour.html</a></p>
 <p><strong>Aliases:</strong></p>
 <ul class="simple">
 <li>A = annotation</li>
@@ -286,7 +309,7 @@ contours specified in <code class="docutils literal notranslate"><span class="pr
 <li>Specify a fixed annotation interval <code class="docutils literal notranslate"><span class="pre">annot_int</span></code> or a
 single annotation level <code class="docutils literal notranslate"><span class="pre">+[annot_int]</span></code></li>
 <li>Disable all annotation  with  <code class="docutils literal notranslate"><span class="pre">'-'</span></code></li>
-<li>Optional label modifers can be specifed as a single string
+<li>Optional label modifiers can be specified as a single string
 <code class="docutils literal notranslate"><span class="pre">'[annot_int]+e'</span></code>  or with a list of options
 <code class="docutils literal notranslate"><span class="pre">([annot_int],</span> <span class="pre">'e',</span> <span class="pre">'f10p',</span> <span class="pre">'gred')</span></code>.</li>
 </ul>
@@ -333,14 +356,15 @@ is no fill.</p>
            </div>
            
           </div>
-          <footer>
+          
+<footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
         <a href="pygmt.Figure.grdimage.html" class="btn btn-neutral float-right" title="pygmt.Figure.grdimage" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="pygmt.Figure.contour.html" class="btn btn-neutral" title="pygmt.Figure.contour" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="pygmt.Figure.contour.html" class="btn btn-neutral float-left" title="pygmt.Figure.contour" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -350,11 +374,26 @@ is no fill.</p>
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017-2019, The PyGMT Developers.
-      Last updated on Jan 26, 2019.
+      
+        <span class="commit">
+          Revision <code><a href="https://github.com/GenericMappingTools/pygmt/commit/63d23d4e0702edb94234f10d23d210cdf1adb54b">63d23d4</a></code>.
+        </span>
+      
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+<p>
+Built with <a href="http://sphinx-doc.org/">Sphinx</a>
+using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+provided by <a href="https://readthedocs.org">Read the Docs</a>
+</p>
+<p>
+This website uses Google Analytics to gather usage statistics.
+However, it does not use cookies or track you across different websites.
+Page view data are used to help us improve the site and provide an estimate of the
+software usage.
+</p>
+
 
 </footer>
 
@@ -367,26 +406,16 @@ is no fill.</p>
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>

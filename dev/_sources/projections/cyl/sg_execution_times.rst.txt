@@ -1,0 +1,12 @@
+
+:orphan:
+
+.. _sphx_glr_projections_cyl_sg_execution_times:
+
+Computation times
+=================
+**00:04.155** total execution time for **projections_cyl** files:
+
+- **00:01.799**: :ref:`sphx_glr_projections_cyl_cyl_cassini.py` (``cyl_cassini.py``)
+- **00:01.219**: :ref:`sphx_glr_projections_cyl_cyl_mercator.py` (``cyl_mercator.py``)
+- **00:01.138**: :ref:`sphx_glr_projections_cyl_cyl_stereographic.py` (``cyl_stereographic.py``)

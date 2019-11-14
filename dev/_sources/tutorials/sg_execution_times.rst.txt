@@ -5,9 +5,9 @@
 
 Computation times
 =================
-**00:16.311** total execution time for **tutorials** files:
+**00:16.320** total execution time for **tutorials** files:
 
-- **00:05.907**: :ref:`sphx_glr_tutorials_coastlines.py` (coastlines.py)
-- **00:04.473**: :ref:`sphx_glr_tutorials_plot.py` (plot.py)
-- **00:03.684**: :ref:`sphx_glr_tutorials_frames.py` (frames.py)
-- **00:02.246**: :ref:`sphx_glr_tutorials_overview.py` (overview.py)
+- **00:05.995**: :ref:`sphx_glr_tutorials_coastlines.py` (``coastlines.py``)
+- **00:04.316**: :ref:`sphx_glr_tutorials_plot.py` (``plot.py``)
+- **00:03.794**: :ref:`sphx_glr_tutorials_frames.py` (``frames.py``)
+- **00:02.216**: :ref:`sphx_glr_tutorials_first-figure.py` (``first-figure.py``)
